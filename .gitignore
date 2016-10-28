@@ -77,11 +77,12 @@ celerybeat-schedule
 
 # dotenv
 .env
+.envrc
+.direnv/
 
 # virtualenv
 venv/
 ENV/
-.direnv/
 
 # Spyder project settings
 .spyderproject
