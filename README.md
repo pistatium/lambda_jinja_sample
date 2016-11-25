@@ -5,9 +5,6 @@ Sample of lambda function with Jinja2
 
 ## Requirements
 
- * Install direnv for Python2 environment
-   * https://github.com/direnv/direnv
-
  * Install Apex for lambda deployment
    * http://apex.run/
 
@@ -16,7 +13,6 @@ Sample of lambda function with Jinja2
 ```bash
 git clone git@github.com:pistatium/lambda_jinja_sample.git
 cd lambda_jinja_sample
-direnv allow 
 pip install -r requirements.txt
 ```
 
