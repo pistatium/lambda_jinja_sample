@@ -1,0 +1,8 @@
+{
+  "name": "jinja",
+  "description": "jinja",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::318903541475:role/jinja_lambda_function",
+  "environment": {}
+}
