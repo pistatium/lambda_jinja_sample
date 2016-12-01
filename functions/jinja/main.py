@@ -16,4 +16,8 @@ def root():
 
 def handle(event, context):
     logger.info(event)
-    return root()
+    return {
+        "statusCode": 200,
+        "headers": {"Content-Type": "text/html"},
+        "body": root()
+    }
