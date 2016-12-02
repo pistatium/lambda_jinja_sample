@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 
 {% block css %}
+   body {
+      font-family: "Hannari"; 
+      font-weight: bold;
+   }
    .masthead.segment {
       min-height: 700px;
       padding: 1em 0em;
@@ -24,15 +28,19 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Torii icon by Icons8 -->
+
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment">
 
             <div class="ui text container">
                 <h1 class="ui inverted header">
+                    <img class="icon icons8-Torii" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAABh0lEQVRoQ+1WgU3EMAw8TwAbwAYwwo/wI8AEMApMACMwAiPwG8AGMIGRX8mr5GvqipTkq7NUvT51W5/vzolgZSErwwMC6p1RMkSG/rkD65Ocqm4B3AF4T9cbgE8AOxGx3+5CVc8BXKXCNgDs/zWAxz1DqnoD4MmpPAO126+DnOF6Xv4QEVsPh6peArgoHrA1u3JY0Rbl+vCxWxF5PkgugXoAcBaupo/ELwD3BsbK+eEhVTXajIVTAWVgNiJiNtnH0VA4IVBHYEYBJU/1ztQoGBdQAmUGfBlMkz4cA+wAbL3h8+s+lMajeSqPyNagDIx5xt1OZm+sqqpjqERk9F1lfjTvYHLnvV5nCYgMFRKl5OihiUHseabV/PYk6x59ykIJaGHqyBAlt7DEytf/WXJRxqY+NIV77gmk2VluCki+T0BOpxY/bZOhogNzvUmGapl3qelJhshQcMzVahQlV6uTHApB6VJylFxQKrUaRcnV6iSnXFC6lFywUc3SZjPUrNLghwko2Khmad/yCECRddOrOAAAAABJRU5ErkJggg==" width="30" height="30">
                     鯖無神社
                 </h1>
                 <h2>test</h2>
             </div>
+            <a href="https://icons8.com">Icon pack by Icons8</a>
         </div>
     </div>
 {% endblock %}
