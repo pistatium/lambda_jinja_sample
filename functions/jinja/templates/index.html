@@ -1,1 +1,38 @@
-<h1>Hello world</h1>
+{% extends "layout.html" %}
+
+{% block css %}
+   .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+{% endblock %}
+
+{% block main %}
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment">
+
+            <div class="ui text container">
+                <h1 class="ui inverted header">
+                    鯖無神社
+                </h1>
+                <h2>test</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
