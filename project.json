@@ -4,5 +4,9 @@
   "memory": 128,
   "timeout": 5,
   "role": "arn:aws:iam::318903541475:role/jinja_lambda_function",
-  "environment": {}
+  "environment": {},
+  "hooks": {
+    "build": "pip install -r requirements.txt -t .",
+    "clean": "find . ! -name main.py ! -name package.json ! -name requirements.txt ! -name .gitignore ! -name *.html -delete"
+  }
 }
