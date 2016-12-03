@@ -18,7 +18,6 @@ pip install -r requirements.txt
 
 ## Deploy
 ```
-pip install -r requirements.txt -t functions/sample
 apex deploy
 apex invoke jinja
 ```
