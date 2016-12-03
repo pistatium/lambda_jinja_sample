@@ -20,7 +20,7 @@ count_table  = dynamodb.Table('lamdba-jinja')
 def root_view(request):
     count = _count()
     template = env.get_template('index.html', )
-    return template.render(count=count, request=request)
+    return template.render(title=u"鯖無神社", count=count, request=request)
 
 
 def handle(event, context):
@@ -39,7 +39,6 @@ def _count():
     :return: 総リクエスト数
     """
     counts = _get_counts()
-    print(counts)
     index = int(time.time() * 1000) % COUNTER_HASH_SIZE
     count = counts.get(str(index), 0)
     _put_count(index, count + 1)

@@ -5,6 +5,12 @@
       font-family: "Hannari"; 
       font-weight: bold;
    }
+   #top_header {
+      font-size: 38px;
+   }
+   .pusher .ui.inverted.segment{
+      background: #b3a16b;
+   }
    .masthead.segment {
       min-height: 700px;
       padding: 1em 0em;
@@ -31,17 +37,16 @@
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment">
             <div class="ui text container">
-                <h1 class="ui inverted header">
-                    <img class="icon icons8-Torii" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAABh0lEQVRoQ+1WgU3EMAw8TwAbwAYwwo/wI8AEMApMACMwAiPwG8AGMIGRX8mr5GvqipTkq7NUvT51W5/vzolgZSErwwMC6p1RMkSG/rkD65Ocqm4B3AF4T9cbgE8AOxGx3+5CVc8BXKXCNgDs/zWAxz1DqnoD4MmpPAO126+DnOF6Xv4QEVsPh6peArgoHrA1u3JY0Rbl+vCxWxF5PkgugXoAcBaupo/ELwD3BsbK+eEhVTXajIVTAWVgNiJiNtnH0VA4IVBHYEYBJU/1ztQoGBdQAmUGfBlMkz4cA+wAbL3h8+s+lMajeSqPyNagDIx5xt1OZm+sqqpjqERk9F1lfjTvYHLnvV5nCYgMFRKl5OihiUHseabV/PYk6x59ykIJaGHqyBAlt7DEytf/WXJRxqY+NIV77gmk2VluCki+T0BOpxY/bZOhogNzvUmGapl3qelJhshQcMzVahQlV6uTHApB6VJylFxQKrUaRcnV6iSnXFC6lFywUc3SZjPUrNLghwko2Khmad/yCECRddOrOAAAAABJRU5ErkJggg==" width="30" height="30">
+                <h1 id="top_header" class="ui inverted header">
+                    <img class="ui image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAC+ElEQVR4Xu1bi3ETMRDdVwG4A6gAqIBQAVABUAFQAVABdEBcAaECSAWECggVECpY5nkk5uYs6U57SiL7VjOe3Fif2316+/FKgay8YeX6iwPgDFg5Am4CqvpGRO6IyHcR+Qvg4phJoaqPg34nO31V9VREXoyUvhIRAhH/snv43B1QqvowbCRl5fPdoFN8Hn4X1d0SgJci8nnhrg/BGS6V+77mdSnBx0rWrDcc+4oAEKk/1hUOfN5m5wRVlfYfbePAdZot/jmAkwgAHeHH2VOPY+BbAJ8iAPdE5Ndx6DVbi/sALv/nASEcPgve88HsZQ5r4M8Qzc64+xQ9mwgF50gPzMaYyUam8MPWm884D3Jdigg/bPRtbBcAGJH2mjkTVFUi+DqxJlFmbhHj8HgIARznHXHMdiD8eB4VYMhOsfMDgPcWMi4BIBc5dt41J4yqsu9bpv8JgLhre0MK0ar4zhIwDoCFNpxT2I0tAFI12RYy4ExEniYW7ooBRXtcCADt/J0DsI+AM6DkeK/LCWpm4dswgSsAG4s/WxIFegJAAJh0MU0KUeB4AVDVnHIWlnUzJ8WSJAMcAGeAm4D7gG48V0NBZjvBqXdO5PObXPFhat2pflUtle6KP6Vza5vygBIA1oRkSvnYX4hQDkCpmNKaASyefkktuhYG5H6Xm3PyBiZgqgtafYADkKnM/AYQy+ZzN7VqnKqyOszj/HHrggHmysxcFAq1SAfAcjbQ2geshgHNy9MNTOArAIbnqmZlgOlUqEqyzODWp0MOgGVXWnviGhlUtenhSGsGmEKRA1CBQC8M4HWaVMZ3mwzgJYhHFVjuhlpNwHQmUCtcanyBAaYfYg6AZVcKVZnnAJgkXVsr3Wy11CJaM8BUlqpBq3U5zgGoQZ9jJ+4WHz8DllxxqQU7EwXMt8xS61WbgANQvue3u3/bYqdza4R/jPiR6a82QQsDmAEmr8FZKjIWsEIylJp6WrsB1QBYBO55jgPQ8+7chGzOgJtAued3rJ4B/wDEx+7ERhtD+gAAAABJRU5ErkJggg==" />
                     鯖無神社
                 </h1>
                 <h2>あなたは {{ count }} 人目の参拝者です。</h2>
             </div>
         </div>
     </div>
-    <pre>
-        {{ request|pprint }}
-    </pre>
-    <a href="https://icons8.com">Icon pack by Icons8</a>
-
+    <h2 class="ui header">リクエスト情報</h2>
+    <pre><code>
+{{ request|pprint }}
+    </code></pre>
 {% endblock %}
