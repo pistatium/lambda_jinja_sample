@@ -2,6 +2,7 @@
 
 import time
 from os import path
+import decimal
 from logging import getLogger
 
 import boto3
@@ -40,8 +41,7 @@ def _count():
     """
     counts = _get_counts()
     index = int(time.time() * 1000) % COUNTER_HASH_SIZE
-    count = counts.get(str(index), 0)
-    _put_count(index, count + 1)
+    _increment_count(index)
     return sum(counts.values()) + 1
 
 
@@ -50,11 +50,17 @@ def _get_counts():
     return {str(c['counter_id']): int(c['count']) for c in counts['Items']}
 
 
-def _put_count(index, count):
-    count_table.put_item(Item={
-        'counter_id': index,
-        'count': count
-    })
+def _increment_count(index):
+    count_table.update_item(
+            Key={'counter_id': index},
+            UpdateExpression="set #count = #count + :val",
+            ExpressionAttributeNames={
+                '#count': 'count'
+            },
+            ExpressionAttributeValues={
+                ':val': decimal.Decimal(1)
+            }
+     )
 
 
 if __name__ == '__main__':
